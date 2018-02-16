@@ -1,0 +1,5 @@
+#!/bin/bash
+
+MAINLINE=`mainline`
+
+git checkout $MAINLINE && git fetch --prune --all && git merge origin/$MAINLINE

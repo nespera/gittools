@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MAINLINE=`mainline`
+
+MERGED=`git branch --merged $MAINLINE | grep -v "$MAINLINE" | grep -v master | sed "s/^[ *]*//"`
+
+for b in $MERGED; do 
+  echo "Pruning $b" 
+  echo "Press Enter to confirm"
+  read confirm
+  git branch -d $b
+done

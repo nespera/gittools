@@ -1,0 +1,4 @@
+#!/bin/bash
+
+git config --unset-all 67b.main
+git config --add 67b.main $1

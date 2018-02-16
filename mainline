@@ -1,0 +1,10 @@
+#!/bin/bash
+
+INCONFIG=`git config --get-all 67b.main`
+
+if [ ! -z "$INCONFIG" ]
+then
+  echo $INCONFIG
+else
+  echo master
+fi
