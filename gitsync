@@ -1,6 +1,5 @@
 #!/bin/bash
 
-MAINLINE=$(mainline)
-ORIGINAL_BRANCH=$(git branch --show-current)
+MAINLINE=`mainline`
 
-git checkout $MAINLINE && git fetch --prune --all && git merge origin/$MAINLINE && git checkout $ORIGINAL_BRANCH
+git checkout $MAINLINE && git fetch --prune --all && git merge origin/$MAINLINE
