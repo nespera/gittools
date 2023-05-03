@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ORIGINAL_BRANCH=$(git branch --show-current)
+
+gitall
+
+# If the original branch still exists, go back to it
+BRANCH_NOW=$(git branch --list "$ORIGINAL_BRANCH")
+if [ ! -z "$BRANCH_NOW" ]
+then
+  git checkout "$ORIGINAL_BRANCH"
+
+fi
+
